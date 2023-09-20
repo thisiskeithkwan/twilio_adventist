@@ -17,8 +17,6 @@ app = FastAPI()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 whatsapp_number = os.getenv("TO_NUMBER")
 
-print(cs_bot_response("超声波几钱?"))
-
 @app.post("/message")
 async def reply(Body: str = Form()):
 
